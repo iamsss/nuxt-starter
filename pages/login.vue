@@ -3,5 +3,10 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'auth-layout',
+  head: {
+    title: "Login"
+  }
+}
 </script>
