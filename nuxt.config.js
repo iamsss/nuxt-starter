@@ -1,3 +1,4 @@
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -18,8 +19,16 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'static/vendors/feather/feather.css',
+    'static/vendors/ti-icons/css/themify-icons.css',
+    'static/vendors/css/vendor.bundle.base.css',
+    'static/css/vertical-layout-light/style.css'
   ],
-
+  // Global Js
+  script: [
+    'static/vendors/js/vendor.bundle.base.js',
+    'static/js/off-canvas.js'
+  ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
