@@ -1,7 +1,16 @@
 <template>
-  <Tutorial/>
+  <div>
+    <HomeDashboard />
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'Dashboard',
+  },
+  mounted() {
+    this.$store.dispatch('sidebar', 'dashboard')
+  },
+}
 </script>

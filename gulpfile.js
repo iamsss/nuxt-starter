@@ -7,14 +7,14 @@ function generateCSS(cb) {
   src('./assets/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('main.css'))
-    .pipe(dest('static/css'))
+    .pipe(dest('static/css/main'))
   cb()
 }
 
 function generateMainJS(cb) {
   src('assets/js/main/*/*.js')
     .pipe(concat('main.js'))
-    .pipe(dest('static/js'))
+    .pipe(dest('static/js/main'))
   cb()
 }
 

@@ -1,3 +1,4 @@
+
 <template>
 <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -10,12 +11,12 @@
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3" method="post" action="/login">
+              <form class="pt-3" @submit.prevent="login()">
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" name="email"  required placeholder="Username">
+                  <input id="emailInput" v-model="email" type="email" class="form-control form-control-lg" name="email"  required placeholder="Username">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" name="password"  required placeholder="Password">
+                  <input id="exampleInputPassword1" v-model="password" type="password" class="form-control form-control-lg" name="password"  required placeholder="Password">
                 </div>
                 <div class="mt-3">
                   <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" >SIGN IN</button>
@@ -30,3 +31,31 @@
     </div>
   </div>
 </template>
+
+<script>
+/* eslint-disable no-console */
+export default {
+ data() {
+    return {
+      email: '',
+      password: '',
+    }
+  },
+  methods: {
+    async login() {
+      console.log("i run on");
+      const isSuccess = await this.$store.dispatch('login',this.getData());
+      if(isSuccess){ 
+        this.$router.push('/');
+      }
+      console.log(isSuccess);
+    },
+    getData(){
+      return {
+        email: this.email,
+        password: this.password
+      }
+    }
+  },
+}
+</script>

@@ -1,5 +1,10 @@
-export default function ({ store, redirect }) {
+export default async function ({ store, redirect, app }) {
     if (!store.state.authenticated) {
-        return redirect('/login');
+       const token = app.$cookies.get('jwt');
+
+       const valid = await store.dispatch('validateToken',{token});
+       if(!valid){
+          return redirect('/login');
+       }
     }
 }

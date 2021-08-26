@@ -1,0 +1,41 @@
+.alert-modal {
+  max-width: 460px;
+}
+.alert-modal_content {
+  padding: 24px 41px 28px;
+  z-index: 2000;
+  text-align: center;
+}
+.alert-modal_icon {
+  padding: 25px 0 10px;
+}
+.alert-modal_error {
+  font-size: 70px;
+}
+.alert-modal_msg {
+  font-weight: 700;
+  padding: 20px;
+  font-size: 15px;
+}
+.close-btn {
+  border-radius: 12px;
+  text-transform: uppercase !important;
+  background: white;
+  border: 1px solid black;
+  color: black;
+  font-family: inherit;
+  text-transform: none;
+}
+.close-btn:hover {
+  background: black !important;
+  color: white !important;
+}
+img.alertIcon {
+  width: 100px;
+  padding: 10px;
+}
+#afford-input tbody .rh-tooltip-container {
+  position: relative;
+  z-index: 0 !important;
+  left: 2.5em;
+}

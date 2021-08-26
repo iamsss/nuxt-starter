@@ -1,12 +1,13 @@
 <template>
-  <Login/>
+  <Login />
 </template>
 
 <script>
 export default {
   layout: 'auth-layout',
+  
   head: {
-    title: "Login"
-  }
+    title: 'Login',
+  },
 }
 </script>
